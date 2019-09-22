@@ -7,6 +7,8 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+import sys
+from PyQt5.QtGui import QIcon, QPixmap
 from bs4 import BeautifulSoup
 import requests
 import csv
@@ -63,11 +65,12 @@ class Ui_MainWindow(object):
 
                 csv_writter.writerow([x, title, synopsis, namer])
 
+
             except:
                 print("Book Doesn't Exist")
 
     def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
+        MainWindow.setObjectName("BookScrapper")
         MainWindow.resize(733, 447)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
